@@ -1,0 +1,97 @@
+.todo-app {
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .todo-item {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .todo-item:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .completed:before {
+    background-color: rgb(34, 197, 94);
+  }
+  
+  .item-text {
+    flex-grow: 1;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .edit-button,.delete-button,
+  .complete-button {
+    margin: 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .delete-button:hover,
+  .edit-button:hover,
+  .complete-button:hover {
+    background-color: #f2f2f2;
+  }
+
+  .delete-button:focus,
+  .edit-button:focus,
+  .complete-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(34, 197, 94);
+  }
+
+  .delete-button:active,
+  .edit-button:active,
+  .complete-button:active {
+    transform: translateY(2px);
+  }
+  
+  .complete-button {
+    background-color: rgb(34, 197, 94);
+    color: #fff;
+  }
+
+  .delete-button{
+    background-color: red;
+  }
+  
+  .complete-button:hover {
+    background-color: #18a564;
+  }
+  
+  .edit-input {
+    display: none;
+  }
+
